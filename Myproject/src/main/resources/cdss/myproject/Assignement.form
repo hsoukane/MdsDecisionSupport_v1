@@ -4,4 +4,29 @@
 <property name="name" value="Assignement.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="assignement_service" type="InputText" id="201997876">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;service (assignement)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_assignement/service"/>
+<property name="outputBinding" value="assignement_/service"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="assignement_urgency" type="InputTextInteger" id="1540011223">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;urgency (assignement)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_assignement/urgency"/>
+<property name="outputBinding" value="assignement_/urgency"/>
+<property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="2" name="assignement_date" type="InputDate" id="2094946049">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;date (assignement)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_assignement/date"/>
+<property name="outputBinding" value="assignement_/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<dataHolder inputId="_assignement" name="#0000A0" type="dataModelerEntry" outId="assignement_" value="cdss.Assignement" id="assignement"/>
 </form>
