@@ -4,15 +4,16 @@
 <property name="name" value="Patienttriageresults-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="0" name="triage_date" type="InputDate" id="830948553">
+<field position="2" name="triage_date" type="InputDate" id="830948553">
 <property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
 <property name="label" value="quot;enquot;,quot;date (triage)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value="_triage/date"/>
 <property name="outputBinding" value="triage_/date"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="1" name="triage_service" type="InputText" id="1744028334">
+<field position="0" name="triage_service" type="InputText" id="1744028334">
 <property name="fieldRequired" value="false"/>
 <property name="label" value="quot;enquot;,quot;service (triage)quot;"/>
 <property name="readonly" value="false"/>
@@ -20,8 +21,9 @@
 <property name="outputBinding" value="triage_/service"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="2" name="triage_urgency" type="InputTextInteger" id="1548130862">
+<field position="1" name="triage_urgency" type="InputTextInteger" id="1548130862">
 <property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
 <property name="label" value="quot;enquot;,quot;urgency (triage)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value="_triage/urgency"/>
