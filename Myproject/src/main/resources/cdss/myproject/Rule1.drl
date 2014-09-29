@@ -59,10 +59,10 @@ ruleflow-group"TriageRules"
 salience 2
 when 
 vs: cdss.VitalSign( name=="Blood glucose" && value>=11)
-service:cdss.Assignement(this!=null)
+triage:cdss.Assignement(this!=null)
 then
-service.setService("Endocrinology and diabetology");
-System.out.println("Suggested patient transfer:"+service.getService());
+triage.setService("Endocrinology and diabetology");
+System.out.println("Suggested patient transfer:"+triage.getService());
 end
 
 
