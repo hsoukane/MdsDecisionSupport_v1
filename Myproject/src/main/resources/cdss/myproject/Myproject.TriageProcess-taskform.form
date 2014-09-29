@@ -4,12 +4,213 @@
 <property name="name" value="Myproject.TriageProcess-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="7" name="patient_diagnoses" type="MultipleSubform" id="756798544">
+<field position="0" name="bloodPressure_date" type="InputDate" id="1926314055">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;diagnoses (patient)quot;"/>
+<property name="label" value="quot;enquot;,quot;date (bloodPressure)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
+<property name="outputBinding" value="bloodPressure/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="1" name="bloodPressure_name" type="InputText" id="2025367766">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (bloodPressure)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="bloodPressure/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="2" name="bloodPressure_unit" type="InputText" id="711206217">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;unit (bloodPressure)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="bloodPressure/unit"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="3" name="bloodPressure_value" type="InputTextFloat" id="1236067746">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;value (bloodPressure)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="bloodPressure/value"/>
+<property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="4" name="measurement_name" type="InputText" id="1079517179">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (measurement)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="measurement/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="5" name="patient_assignement" type="Subform" id="13090996">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;assignement (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/assignement"/>
+<property name="defaultSubform" value="Assignement.form"/>
+<property name="fieldClass" value="java.lang.Object"/>
+</field>
+<field position="6" name="patient_birthDate" type="InputDate" id="933849297">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;birthDate (patient)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/birthDate"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="7" name="patient_diagnoses" type="MultipleSubform" id="756798544">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;diagnoses (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
 <property name="outputBinding" value="patient/diagnoses"/>
+<property name="defaultSubform" value="Diagnosis.form"/>
+<property name="previewSubform" value="Diagnosis.form"/>
+<property name="tableSubform" value="Diagnosis.form"/>
+<property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
+<property name="visualizeItems" value="false"/>
+<property name="hideCreateItem" value="true"/>
+<property name="expanded" value="false"/>
+<property name="enableTableEnterData" value="false"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="8" name="patient_firstName" type="InputText" id="1820783285">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;firstName (patient)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/firstName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="9" name="patient_lastName" type="InputText" id="986010816">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;lastName (patient)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/lastName"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="10" name="patient_medicalExaminations" type="MultipleSubform" id="903824945">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;medicalExaminations (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/medicalExaminations"/>
+<property name="defaultSubform" value="MedicalExamination.form"/>
+<property name="previewSubform" value="MedicalExamination.form"/>
+<property name="tableSubform" value="MedicalExamination.form"/>
+<property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
+<property name="visualizeItems" value="false"/>
+<property name="hideCreateItem" value="true"/>
+<property name="expanded" value="false"/>
+<property name="enableTableEnterData" value="false"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="11" name="patient_symptoms" type="MultipleSubform" id="925941484">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;symptoms (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/symptoms"/>
+<property name="defaultSubform" value="Symptom.form"/>
+<property name="previewSubform" value="Symptom.form"/>
+<property name="tableSubform" value="Symptom.form"/>
+<property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
+<property name="visualizeItems" value="false"/>
+<property name="hideCreateItem" value="true"/>
+<property name="expanded" value="false"/>
+<property name="enableTableEnterData" value="false"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="12" name="patient_treatments" type="MultipleSubform" id="243165257">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;treatments (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/treatments"/>
+<property name="defaultSubform" value="Treatment.form"/>
+<property name="previewSubform" value="Treatment.form"/>
+<property name="tableSubform" value="Treatment.form"/>
+<property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
+<property name="visualizeItems" value="false"/>
+<property name="hideCreateItem" value="true"/>
+<property name="expanded" value="false"/>
+<property name="enableTableEnterData" value="false"/>
+<property name="fieldClass" value="java.util.List"/>
+</field>
+<field position="13" name="patient_vitalSigns" type="MultipleSubform" id="1921199893">
+<property name="fieldRequired" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;vitalSigns (patient)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="patient/vitalSigns"/>
+<property name="defaultSubform" value="VitalSign.form"/>
+<property name="previewSubform" value="VitalSign.form"/>
+<property name="tableSubform" value="VitalSign.form"/>
+<property name="newItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="addItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="cancelItemText" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="deleteItems" value="false"/>
+<property name="updateItems" value="false"/>
+<property name="visualizeItems" value="false"/>
+<property name="hideCreateItem" value="true"/>
+<property name="expanded" value="false"/>
+<property name="enableTableEnterData" value="false"/>
 <property name="fieldClass" value="java.util.List"/>
 </field>
 <field position="14" name="pulse_date" type="InputDate" id="186611322">
@@ -20,110 +221,6 @@
 <property name="outputBinding" value="pulse/date"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="34" name="triage_urgency" type="InputTextInteger" id="940299913">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;urgency (triage)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="triage/urgency"/>
-<property name="fieldClass" value="java.lang.Integer"/>
-</field>
-<field position="23" name="symptom1_description" type="InputText" id="1099644702">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;description (symptom1)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="symptom1/description"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="6" name="patient_birthDate" type="InputDate" id="933849297">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;birthDate (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/birthDate"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="13" name="patient_vitalSigns" type="MultipleSubform" id="1921199893">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;vitalSigns (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/vitalSigns"/>
-<property name="fieldClass" value="java.util.List"/>
-</field>
-<field position="21" name="respiratoryRate_value" type="InputTextFloat" id="1601534037">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;value (respiratoryRate)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="respiratoryRate/value"/>
-<property name="fieldClass" value="java.lang.Float"/>
-</field>
-<field position="5" name="patient_assignement" type="Subform" id="13090996">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;assignement (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/assignement"/>
-<property name="fieldClass" value="java.lang.Object"/>
-</field>
-<field position="29" name="temperature_name" type="InputText" id="1967553195">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (temperature)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="temperature/name"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="1" name="bloodPressure_name" type="InputText" id="2025367766">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (bloodPressure)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="bloodPressure/name"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="32" name="triage_date" type="InputDate" id="1442139943">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;date (triage)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="triage/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="16" name="pulse_unit" type="InputText" id="1668322896">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;unit (pulse)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="pulse/unit"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="26" name="symptom3_date" type="InputDate" id="146934008">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;date (symptom3)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="symptom3/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="18" name="respiratoryRate_date" type="InputDate" id="314855454">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;date (respiratoryRate)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="respiratoryRate/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="20" name="respiratoryRate_unit" type="InputText" id="519043397">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;unit (respiratoryRate)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="respiratoryRate/unit"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
 <field position="15" name="pulse_name" type="InputText" id="479749252">
 <property name="fieldRequired" value="false"/>
 <property name="label" value="quot;enquot;,quot;name (pulse)quot;"/>
@@ -132,68 +229,12 @@
 <property name="outputBinding" value="pulse/name"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="28" name="temperature_date" type="InputDate" id="685077298">
+<field position="16" name="pulse_unit" type="InputText" id="1668322896">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;date (temperature)quot;"/>
+<property name="label" value="quot;enquot;,quot;unit (pulse)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="temperature/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="30" name="temperature_unit" type="InputText" id="242463917">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;unit (temperature)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="temperature/unit"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="11" name="patient_symptoms" type="MultipleSubform" id="925941484">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;symptoms (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/symptoms"/>
-<property name="fieldClass" value="java.util.List"/>
-</field>
-<field position="10" name="patient_medicalExaminations" type="MultipleSubform" id="903824945">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;medicalExaminations (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/medicalExaminations"/>
-<property name="fieldClass" value="java.util.List"/>
-</field>
-<field position="12" name="patient_treatments" type="MultipleSubform" id="243165257">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;treatments (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/treatments"/>
-<property name="fieldClass" value="java.util.List"/>
-</field>
-<field position="19" name="respiratoryRate_name" type="InputText" id="1228361326">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (respiratoryRate)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="respiratoryRate/name"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="4" name="measurement_name" type="InputText" id="1079517179">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (measurement)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="measurement/name"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="27" name="symptom3_description" type="InputText" id="780110319">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;description (symptom3)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="symptom3/description"/>
+<property name="outputBinding" value="pulse/unit"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
 <field position="17" name="pulse_value" type="InputTextFloat" id="662461115">
@@ -204,29 +245,37 @@
 <property name="outputBinding" value="pulse/value"/>
 <property name="fieldClass" value="java.lang.Float"/>
 </field>
-<field position="33" name="triage_service" type="InputText" id="867851752">
+<field position="18" name="respiratoryRate_date" type="InputDate" id="314855454">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;service (triage)quot;"/>
+<property name="label" value="quot;enquot;,quot;date (respiratoryRate)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="triage/service"/>
+<property name="outputBinding" value="respiratoryRate/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="19" name="respiratoryRate_name" type="InputText" id="1228361326">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (respiratoryRate)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="respiratoryRate/name"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="8" name="patient_firstName" type="InputText" id="1820783285">
+<field position="20" name="respiratoryRate_unit" type="InputText" id="519043397">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;firstName (patient)quot;"/>
+<property name="label" value="quot;enquot;,quot;unit (respiratoryRate)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/firstName"/>
+<property name="outputBinding" value="respiratoryRate/unit"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="25" name="symptom2_description" type="InputText" id="676834362">
+<field position="21" name="respiratoryRate_value" type="InputTextFloat" id="1601534037">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;description (symptom2)quot;"/>
+<property name="label" value="quot;enquot;,quot;value (respiratoryRate)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="symptom2/description"/>
-<property name="fieldClass" value="java.lang.String"/>
+<property name="outputBinding" value="respiratoryRate/value"/>
+<property name="fieldClass" value="java.lang.Float"/>
 </field>
 <field position="22" name="symptom1_date" type="InputDate" id="1040992634">
 <property name="fieldRequired" value="false"/>
@@ -236,20 +285,12 @@
 <property name="outputBinding" value="symptom1/date"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="31" name="temperature_value" type="InputTextFloat" id="1502193207">
+<field position="23" name="symptom1_description" type="InputText" id="1099644702">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;value (temperature)quot;"/>
+<property name="label" value="quot;enquot;,quot;description (symptom1)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="temperature/value"/>
-<property name="fieldClass" value="java.lang.Float"/>
-</field>
-<field position="2" name="bloodPressure_unit" type="InputText" id="711206217">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;unit (bloodPressure)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="bloodPressure/unit"/>
+<property name="outputBinding" value="symptom1/description"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
 <field position="24" name="symptom2_date" type="InputDate" id="921988423">
@@ -260,29 +301,85 @@
 <property name="outputBinding" value="symptom2/date"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="0" name="bloodPressure_date" type="InputDate" id="1926314055">
+<field position="25" name="symptom2_description" type="InputText" id="676834362">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;date (bloodPressure)quot;"/>
+<property name="label" value="quot;enquot;,quot;description (symptom2)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="bloodPressure/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="9" name="patient_lastName" type="InputText" id="986010816">
-<property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;lastName (patient)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value=""/>
-<property name="outputBinding" value="patient/lastName"/>
+<property name="outputBinding" value="symptom2/description"/>
 <property name="fieldClass" value="java.lang.String"/>
 </field>
-<field position="3" name="bloodPressure_value" type="InputTextFloat" id="1236067746">
+<field position="26" name="symptom3_date" type="InputDate" id="146934008">
 <property name="fieldRequired" value="false"/>
-<property name="label" value="quot;enquot;,quot;value (bloodPressure)quot;"/>
+<property name="label" value="quot;enquot;,quot;date (symptom3)quot;"/>
 <property name="readonly" value="false"/>
 <property name="inputBinding" value=""/>
-<property name="outputBinding" value="bloodPressure/value"/>
+<property name="outputBinding" value="symptom3/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="27" name="symptom3_description" type="InputText" id="780110319">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;description (symptom3)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="symptom3/description"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="28" name="temperature_date" type="InputDate" id="685077298">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;date (temperature)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="temperature/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="29" name="temperature_name" type="InputText" id="1967553195">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;name (temperature)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="temperature/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="30" name="temperature_unit" type="InputText" id="242463917">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;unit (temperature)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="temperature/unit"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="31" name="temperature_value" type="InputTextFloat" id="1502193207">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;value (temperature)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="temperature/value"/>
 <property name="fieldClass" value="java.lang.Float"/>
+</field>
+<field position="32" name="triage_date" type="InputDate" id="1442139943">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;date (triage)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="triage/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="33" name="triage_service" type="InputText" id="867851752">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;service (triage)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="triage/service"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="34" name="triage_urgency" type="InputTextInteger" id="940299913">
+<property name="fieldRequired" value="false"/>
+<property name="label" value="quot;enquot;,quot;urgency (triage)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value=""/>
+<property name="outputBinding" value="triage/urgency"/>
+<property name="fieldClass" value="java.lang.Integer"/>
 </field>
 <dataHolder inputId="" name="#9BCAFA" type="dataModelerEntry" outId="bloodPressure" value="cdss.VitalSign" id="bloodPressure"/>
 <dataHolder inputId="" name="#000000" type="dataModelerEntry" outId="measurement" value="cdss.VitalParameterMeasurement" id="measurement"/>
