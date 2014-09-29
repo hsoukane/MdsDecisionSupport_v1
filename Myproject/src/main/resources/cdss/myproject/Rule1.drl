@@ -2,6 +2,7 @@ package cdss.myproject;
 import cdss.Symptom;
 import cdss.VitalSign;
 import cdss.PatientRecord;
+import cdss.Assignement;
 
 rule"inserting patient symptoms into the wm"
 ruleflow-group"NurseExaminations"
@@ -39,7 +40,29 @@ measurement: cdss.VitalParameterMeasurement( this!=null)
 then
 measurement.setName("Blood glucose test");
 System.out.println(measurement.getName()+ "is required");
+end
 
+rule"Reinserting patient vital signs inton the WM"
+ruleflow-group"TriageRules"
+salience 3
+no-loop true
+when
+patient: cdss.PatientRecord( vsl:vitalSigns)
+vs:cdss.VitalSign( )from vsl
+then
+insertLogical(vs);
+System.out.println("insert fact:"+ vs.getName());
+end
+
+rule"TriagePatient"
+ruleflow-group"TriageRules"
+salience 2
+when 
+vs: cdss.VitalSign( name=="Blood glucose" && value>=11)
+service:cdss.Assignement(this!=null)
+then
+service.setService("Endocrinology and diabetology");
+System.out.println("Suggested patient transfer:"+service.getService());
 end
 
 
