@@ -1,2 +1,17 @@
 package cdss.myproject;
+import cdss.PatientRecord;
+import cdss.MedicalExamination;
+import cdss.Assignement;
+
+
+rule"Clinical examinations"
+ruleflow-group"ClinicalExamsRules"
+no-loop true
+salience 5
+when
+tr:cdss.Assignement( service=="Endocrinology and diabetology")
+me: cdss.MedicalExamination(this!=null)
+then
+me.setName("Diabetic medical exam");
+end
 
