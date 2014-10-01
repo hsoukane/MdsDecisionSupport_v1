@@ -9,11 +9,11 @@ ruleflow-group"ClinicalExamsRules"
 no-loop true
 salience 3
 when
-patient: cdss.PatientRecord(Assignement.service=="Endocrinology and diabetology" )
-exam: cdss.MedicalExamination(this==null)
+triage:cdss.Assignement(service=="Endocrinology and diabetology" )
+medicalExam: cdss.MedicalExamination(this==null)
 then
-exam.setName(" Diabetic examination");
-System.out.println(exam.getName());
+medicalExam.setName(" Diabetic examination");
+System.out.println(medicalExam.getName());
 
 end
 
