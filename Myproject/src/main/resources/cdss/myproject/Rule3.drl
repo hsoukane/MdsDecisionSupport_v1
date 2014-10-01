@@ -11,12 +11,10 @@ salience 3
 when
 patient: cdss.PatientRecord()
 triage:cdss.Assignement( service=="Endocrinology and diabetology")
-me:cdss.MedicalExamination(this==null )
+exam: cdss.MedicalExamination()
 then
-
-me.setName("Diabetic examination");
-patient.getMedicalExaminations().add(0,me);
-System.out.println(me.getName()+"must be done");
+exam.setName(" Diabetic examination");
+System.out.println(exam.getName());
 
 end
 
