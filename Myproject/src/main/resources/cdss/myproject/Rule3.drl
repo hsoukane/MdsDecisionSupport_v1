@@ -10,10 +10,9 @@ no-loop true
 
 when
 triage:cdss.Assignement(service=="Endocrinology and diabetology" )
-
+medicalExam: cdss.MedicalExamination( this!=null)
 then
-
-System.out.println("hello");
-
+medicalExam.setName("Diabetic examination");
+System.out.println( medicalExam.getName() + "is required");
 end
 
