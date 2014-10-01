@@ -13,7 +13,7 @@ patient: cdss.PatientRecord()
 triage:cdss.Assignement( service=="Endocrinology and diabetology")
 me:cdss.MedicalExamination(this==null )
 then
-insertLogical(me);
+
 me.setName("Diabetic examination");
 patient.getMedicalExaminations().add(0,me);
 System.out.println(me.getName()+"must be done");
