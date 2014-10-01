@@ -10,7 +10,7 @@ no-loop true
 salience 5
 when
 triage:cdss.Assignement( service=="Endocrinology and diabetology")
-medicalExam: cdss.MedicalExamination(this!=null)
+medicalExam: cdss.MedicalExamination()
 then
 medicalExam.setName("Diabetic medical exam");
 System.out.println(medicalExam.getName()+"must be done");
