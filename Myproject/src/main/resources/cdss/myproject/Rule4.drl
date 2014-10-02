@@ -1,15 +1,15 @@
 package cdss.myproject;
-import org.kie.api.runtime.process.ProcessInstance;
+import org.kie.api.runtime.KieSession;
 import cdss.VitalParameterMeasurement;
 
 rule "measurementTrigger"
 ruleflow-group"TriggersRules"
 no-loop true
 when
-processInstance:ProcessInstance()
+kieSession: KieSession()
 measurement: cdss.VitalParameterMeasurement(name=="Blood glucose test")
 then
-processInstance.signalEvent("glucose test", null);
+kieSession.signalEvent("glucose test", null);
 end
 
 
