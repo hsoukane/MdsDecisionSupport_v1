@@ -7,7 +7,7 @@ ruleflow-group"TriggersRules"
 no-loop true
 when
 kieSession: KieSession()
-measurement: cdss.VitalParameterMeasurement(name=="Blood glucose test")
+measurement: cdss.VitalParameterMeasurement(name=="Blood glucose test" && nurseAgreement==true)
 then
 kieSession.signalEvent("Blood glucose test", null);
 end
