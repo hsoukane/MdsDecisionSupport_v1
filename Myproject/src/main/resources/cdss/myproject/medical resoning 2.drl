@@ -1,2 +1,14 @@
 package cdss.myproject;
+import cdss.VitalParameterMeasurement;
+import org.kie.api.runtime.KieSession;
 
+rule"trigger a medical call activity"
+ruleflow-group"NurseDecisions"
+salience 3
+no-loop true
+when
+kieSession: KieSession();
+vs_measurement: cdss.VitalParameterMeasurement(name=="Blood glucose test" && nurseAgreement==true )
+then
+kieSession.signalEvent("Blood glucose test", null);
+end
