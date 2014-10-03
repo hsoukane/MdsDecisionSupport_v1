@@ -36,10 +36,10 @@ when
 syp1:cdss.Symptom(description=="vomiting" )
 syp2: cdss.Symptom(description=="loss of consciousness" )
 syp3: cdss.Symptom(description=="abdominal pain")
-measurement: cdss.VitalParameterMeasurement( this!=null)
+suggestedMeasurement: cdss.VitalParameterMeasurement( this!=null)
 then
-measurement.setName("Blood glucose test");
-System.out.println(measurement.getName()+ "is required");
+suggestedMeasurement.setName("Blood glucose test");
+System.out.println(suggestedMeasurement.getName()+ "is required");
 end
 
 
