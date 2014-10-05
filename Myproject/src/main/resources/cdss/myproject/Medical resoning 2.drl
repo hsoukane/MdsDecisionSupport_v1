@@ -1,2 +1,27 @@
 package cdss.myproject;
+import cdss.PatientRecord;
+import cdss.VitalSign;
+import cdss.Assignement;
+
+rule"reinserting patient vital signs into the wm"
+ruleflow-group"Triage"
+no-loop true
+when
+patient: PatientRecord(lvs:vitalSigns)
+vs:cdss.VitalSign( ) from lvs
+then
+insertLogical(vs);
+end
+
+rule" patient triage"
+ruleflow-group"Triage"
+no-loop true
+when
+bg: cdss.VitalSign(name=="Blood glucose" && value>=11 && unit=="mmol/l")
+triage:cdss.Assignement( this!=null)
+then
+triage.setService("Endocrinology and diabetology");
+end
+
+
 
