@@ -18,9 +18,9 @@ ruleflow-group"Triage"
 no-loop true
 when
 bg: cdss.VitalSign(name=="Blood glucose" && value>=11 && unit=="mmol/l")
-triage:cdss.Assignement( this!=null)
+suggestedTriage:cdss.Assignement( this!=null)
 then
-triage.setService("Endocrinology and diabetology");
+suggestedTriage.setService("Endocrinology and diabetology");
 end
 
 
