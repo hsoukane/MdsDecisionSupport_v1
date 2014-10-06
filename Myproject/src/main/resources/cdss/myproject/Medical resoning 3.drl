@@ -39,6 +39,7 @@ vs3: cdss.VitalSign( name=="Bicarbonate level" && value< 15  && unit=="mmol/l") 
 diagnosis: cdss.Diagnosis(this!=null )
 then
 diagnosis.setValue("Diabetic ketoacidosis");
+System.out.println("Diabetic ketoacidosis");
 end
 
 rule "Diabetic coma"
@@ -53,5 +54,6 @@ vs4: cdss.VitalSign( name=="Glasgow score" && value<12) ||
 vs5: cdss.VitalSign(name=="Blood oxygen saturation" && value<92)
 diagnosis: cdss.Diagnosis(this!=null )
 then
-diagnosis.setValue(" Diabetic coma");
+diagnosis.setValue("Diabetic coma");
+System.out.println("Diabetic coma");
 end 
