@@ -4,6 +4,37 @@
 <property name="name" value="Suggestedtests-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
+<field position="0" name="suggestedMeasurement_name" type="InputText" id="1075604416">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="false"/>
+<property name="labelCSSClass" value=""/>
+<property name="labelCSSStyle" value=""/>
+<property name="label" value="quot;SSClassquot;,quot;quot;quot;SSStylequot;,quot;quot;quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;name (suggestedMeasurement)quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="errorMessage" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="title" value="quot;caquot;,quot;quot;quot;dequot;,quot;quot;quot;enquot;,quot;quot;quot;esquot;,quot;quot;quot;frquot;,quot;quot;quot;jaquot;,quot;quot;quot;ptquot;,quot;quot;quot;zhquot;,quot;quot;"/>
+<property name="readonly" value="false"/>
+<property name="size" value=""/>
+<property name="formula" value=""/>
+<property name="rangeFormula" value=""/>
+<property name="pattern" value=""/>
+<property name="styleclass" value=""/>
+<property name="cssStyle" value=""/>
+<property name="isHTML" value="false"/>
+<property name="hideContent" value="false"/>
+<property name="defaultValueFormula" value="=suggestedMeasurement.getName()"/>
+<property name="inputBinding" value="_suggestedMeasurement/name"/>
+<property name="outputBinding" value="suggestedMeasurement_/name"/>
+<property name="fieldClass" value="java.lang.String"/>
+</field>
+<field position="1" name="suggestedMeasurement_nurseAgreement" type="CheckBox" id="2085813660">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;nurseAgreement (suggestedMeasurement)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_suggestedMeasurement/nurseAgreement"/>
+<property name="outputBinding" value="suggestedMeasurement_/nurseAgreement"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
+</field>
 <field position="2" name="measurement_name" type="InputText" id="1717341943">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="false"/>
@@ -20,24 +51,6 @@
 <property name="readonly" value="false"/>
 <property name="inputBinding" value="_measurement/nurseAgreement"/>
 <property name="outputBinding" value="measurement_/nurseAgreement"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
-<field position="0" name="suggestedMeasurement_name" type="InputText" id="1075604416">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="false"/>
-<property name="label" value="quot;enquot;,quot;name (suggestedMeasurement)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="_suggestedMeasurement/name"/>
-<property name="outputBinding" value="suggestedMeasurement_/name"/>
-<property name="fieldClass" value="java.lang.String"/>
-</field>
-<field position="1" name="suggestedMeasurement_nurseAgreement" type="CheckBox" id="2085813660">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;enquot;,quot;nurseAgreement (suggestedMeasurement)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="_suggestedMeasurement/nurseAgreement"/>
-<property name="outputBinding" value="suggestedMeasurement_/nurseAgreement"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <dataHolder inputId="_measurement" name="#000000" type="dataModelerEntry" outId="measurement_" value="cdss.VitalParameterMeasurement" id="measurement"/>
