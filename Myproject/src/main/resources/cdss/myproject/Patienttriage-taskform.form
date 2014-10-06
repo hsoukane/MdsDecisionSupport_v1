@@ -4,24 +4,6 @@
 <property name="name" value="Patienttriage-taskform.form"/>
 <property name="displayMode" value="default"/>
 <property name="status" value="0"/>
-<field position="2" name="suggestedTriage_date" type="InputDate" id="486032587">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;enquot;,quot;date (suggestedTriage)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="_suggestedTriage/date"/>
-<property name="outputBinding" value="suggestedTriage_/date"/>
-<property name="fieldClass" value="java.util.Date"/>
-</field>
-<field position="3" name="suggestedTriage_nurseAgreement" type="CheckBox" id="518115722">
-<property name="fieldRequired" value="false"/>
-<property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;enquot;,quot;nurseAgreement (suggestedTriage)quot;"/>
-<property name="readonly" value="false"/>
-<property name="inputBinding" value="_suggestedTriage/nurseAgreement"/>
-<property name="outputBinding" value="suggestedTriage_/nurseAgreement"/>
-<property name="fieldClass" value="java.lang.Boolean"/>
-</field>
 <field position="0" name="suggestedTriage_service" type="InputText" id="23558931">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="false"/>
@@ -53,22 +35,22 @@
 <property name="outputBinding" value="suggestedTriage_/urgency"/>
 <property name="fieldClass" value="java.lang.Integer"/>
 </field>
-<field position="6" name="triage_date" type="InputDate" id="1791229688">
+<field position="2" name="suggestedTriage_date" type="InputDate" id="486032587">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;enquot;,quot;date (triage)quot;"/>
+<property name="label" value="quot;enquot;,quot;date (suggestedTriage)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_triage/date"/>
-<property name="outputBinding" value="triage_/date"/>
+<property name="inputBinding" value="_suggestedTriage/date"/>
+<property name="outputBinding" value="suggestedTriage_/date"/>
 <property name="fieldClass" value="java.util.Date"/>
 </field>
-<field position="7" name="triage_nurseAgreement" type="CheckBox" id="1883341072">
+<field position="3" name="suggestedTriage_nurseAgreement" type="CheckBox" id="518115722">
 <property name="fieldRequired" value="false"/>
 <property name="groupWithPrevious" value="true"/>
-<property name="label" value="quot;enquot;,quot;nurseAgreement (triage)quot;"/>
+<property name="label" value="quot;enquot;,quot;nurseAgreement (suggestedTriage)quot;"/>
 <property name="readonly" value="false"/>
-<property name="inputBinding" value="_triage/nurseAgreement"/>
-<property name="outputBinding" value="triage_/nurseAgreement"/>
+<property name="inputBinding" value="_suggestedTriage/nurseAgreement"/>
+<property name="outputBinding" value="suggestedTriage_/nurseAgreement"/>
 <property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <field position="4" name="triage_service" type="InputText" id="919544270">
@@ -88,6 +70,24 @@
 <property name="inputBinding" value="_triage/urgency"/>
 <property name="outputBinding" value="triage_/urgency"/>
 <property name="fieldClass" value="java.lang.Integer"/>
+</field>
+<field position="6" name="triage_date" type="InputDate" id="1791229688">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;date (triage)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_triage/date"/>
+<property name="outputBinding" value="triage_/date"/>
+<property name="fieldClass" value="java.util.Date"/>
+</field>
+<field position="7" name="triage_nurseAgreement" type="CheckBox" id="1883341072">
+<property name="fieldRequired" value="false"/>
+<property name="groupWithPrevious" value="true"/>
+<property name="label" value="quot;enquot;,quot;nurseAgreement (triage)quot;"/>
+<property name="readonly" value="false"/>
+<property name="inputBinding" value="_triage/nurseAgreement"/>
+<property name="outputBinding" value="triage_/nurseAgreement"/>
+<property name="fieldClass" value="java.lang.Boolean"/>
 </field>
 <dataHolder inputId="_suggestedTriage" name="#BBBBBB" type="dataModelerEntry" outId="suggestedTriage_" value="cdss.Assignement" id="suggestedTriage"/>
 <dataHolder inputId="_triage" name="#E9E371" type="dataModelerEntry" outId="triage_" value="cdss.Assignement" id="triage"/>
