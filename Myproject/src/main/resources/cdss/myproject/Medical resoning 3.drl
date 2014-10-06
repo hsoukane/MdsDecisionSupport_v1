@@ -1,2 +1,57 @@
 package cdss.myproject;
+import cdss.Symptom;
+import cdss.VitalSign;
+import cdss.PatientRecord;
+import cdss.Diagnosis;
 
+rule"Reinserting patient symptoms into the wm"
+ruleflow-group"Diagnosis"
+salience 4
+no-loop true
+when
+patient: cdss.PatientRecord( syl:symptoms)
+sy:cdss.Symptom( )from syl
+then
+insertLogical(sy);
+System.out.println("insert fact:"+ sy.getDescription());
+end
+
+rule"inserting again patient vital signs into the wm"
+ruleflow-group"Diagnosis"
+salience 4
+no-loop true
+when
+patient: cdss.PatientRecord( vsl:vitalSigns)
+vs:cdss.VitalSign( )from vsl
+then
+insertLogical(vs);
+System.out.println("insert fact:"+ vs.getName());
+end
+
+rule "Diabetic ketocacidosis"
+ruleflow-group"Diagnosis"
+salience 3
+no-loop true
+when
+vs1:cdss.VitalSign( name=="Blood ketone" && value>= 3  && unit=="mmol/l")
+vs2:cdss.VitalSign( name=="Blood glucose" && value>= 11  && unit=="mmol/l")
+vs3: cdss.VitalSign( name=="Bicarbonate level" && value< 15  && unit=="mmol/l") || vs4: cdss.VitalSign( name=="Blood venous PH" && value< 7.3 )
+diagnosis: cdss.Diagnosis(this!=null )
+then
+diagnosis.setValue("Diabetic ketoacidosis");
+end
+
+rule "Diabetic coma"
+ruleflow-group"Diagnosis"
+salience 4
+no-loop true
+when
+vs1:cdss.VitalSign( name=="Blood ketone" && value>=6&& unit=="mmol/l") ||
+vs2: cdss.VitalSign( name=="Bicarbonate level" && value< 5  && unit=="mmol/l") || 
+vs3: cdss.VitalSign( name=="Blood venous PH" && value< 7.1 ) || 
+vs4: cdss.VitalSign( name=="Glasgow score" && value<12) || 
+vs5: cdss.VitalSign(name=="Blood oxygen saturation" && value<92)
+diagnosis: cdss.Diagnosis(this!=null )
+then
+diagnosis.setValue(" Diabetic coma");
+end 
