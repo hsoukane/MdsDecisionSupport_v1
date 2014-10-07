@@ -47,11 +47,11 @@ ruleflow-group"Diagnosis"
 salience 4
 no-loop true
 when
-(vs1:VitalSign( name=="Blood ketone" && value>=6&& unit=="mmol/l") ||
- vs2:VitalSign( name=="Bicarbonate level" && value< 5  && unit=="mmol/l") || 
-vs3: VitalSign( name=="Blood venous PH" && value< 7.1 ) || 
-vs4:VitalSign( name=="Glasgow score" && value<12) || 
-vs5: VitalSign(name=="Blood oxygen saturation" && value<92))
+vs1:VitalSign( name=="Blood ketone" && value>=6&& unit=="mmol/l") 
+ vs2:VitalSign( name=="Bicarbonate level" && value< 5  && unit=="mmol/l") 
+vs3: VitalSign( name=="Blood venous PH" && value< 7.1 ) 
+vs4:VitalSign( name=="Glasgow score" && value<12) 
+vs5: VitalSign(name=="Blood oxygen saturation" && value<92)
 diagnosis: cdss.Diagnosis(this!=null )
 then
 diagnosis.setValue("Diabetic coma");
