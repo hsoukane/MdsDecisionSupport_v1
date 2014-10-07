@@ -6,6 +6,7 @@ import cdss.Assignement;
 rule"reinserting patient vital signs into the wm"
 ruleflow-group"Triage"
 no-loop true
+salience 5
 when
 patient: PatientRecord(lvs:vitalSigns)
 vs:cdss.VitalSign( ) from lvs
@@ -16,6 +17,7 @@ end
 rule" patient triage"
 ruleflow-group"Triage"
 no-loop true
+salience 4
 when
 bg: cdss.VitalSign(name=="Blood glucose" && value>=11 && unit=="mmol/l")
 suggestedTriage:cdss.Assignement( this!=null)
