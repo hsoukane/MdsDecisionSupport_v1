@@ -31,7 +31,7 @@ end
 rule "Diabetic ketocacidosis"
 ruleflow-group"Diagnosis"
 salience 1
-no-loop true
+
 when
 vs1:cdss.VitalSign( name=="Blood ketone" && value>= 3  && unit=="mmol/l")
 vs2:cdss.VitalSign( name=="Blood glucose" && value>= 11  && unit=="mmol/l")
@@ -45,7 +45,7 @@ end
 rule "Diabetic coma"
 ruleflow-group"Diagnosis"
 salience 4
-no-loop true
+
 when
 vs1:VitalSign( name=="Blood ketone" && value>=6&& unit=="mmol/l") 
  vs2:VitalSign( name=="Bicarbonate level" && value< 5  && unit=="mmol/l") 
