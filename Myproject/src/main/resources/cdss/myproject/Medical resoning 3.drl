@@ -29,15 +29,3 @@ System.out.println("insert fact:"+ vs.getName());
 end
 
 
-rule "Diabetic ketocacidosis"
-ruleflow-group"Diagnosis"
-salience 1
-when
-vs1:cdss.VitalSign( name=="Blood ketone" && value>= 3  && unit=="mmol/l")
-vs2:cdss.VitalSign( name=="Blood glucose" && value>= 11  && unit=="mmol/l")
-vs3: cdss.VitalSign( name=="Bicarbonate level" && value<15  && unit=="mmol/l") || vs4: cdss.VitalSign( name=="Blood venous PH" && value< 7.3 )
-diagnosis: cdss.Diagnosis(this!=null )
-then
-diagnosis.setValue("Diabetic ketoacidosis");
-System.out.println("Diabetic ketoacidosis");
-end
