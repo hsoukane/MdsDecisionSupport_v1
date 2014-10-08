@@ -54,4 +54,13 @@ suggestedDiagnosis.setValue("Diabetic ketoacidosis");
 System.out.println("Diabetic ketoacidosis");     
 end
 
-
+rule"Hypoglycemia"
+dialect "mvel"
+ruleflow-group"Diagnosis"
+salience 2
+when
+vs1: VitalSign(name=="Blood glucose, value<= 4, unit=="mmol/")
+suggestedDiagnosis : Diagnosis( this != null)
+then
+suggestedDiagnosis.setValue("Hypoglycemia");
+end
