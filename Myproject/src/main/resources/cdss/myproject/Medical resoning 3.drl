@@ -64,3 +64,19 @@ suggestedDiagnosis : Diagnosis( this != null)
 then
 suggestedDiagnosis.setValue("Hypoglycemia");
 end
+
+
+rule "Good diagnosis"
+dialect "mvel"
+ruleflow-group "Diagnosis"
+salience 2
+when
+VitalSign( name == "Blood glucose" , value > 4.0 , value < 11.0 , unit == "mmol/l" )
+VitalSign( name == "Blood ketone" , value <= 3.0 , unit == "mmol/l" )
+VitalSign( name == "Blood venous PH" , value == 7.3 )
+VitalSign( name == "Glasgow score" , value > 14.0 )
+ suggestedDiagnosis : Diagnosis( this != null )
+ then
+suggestedDiagnosis.setValue( "All is right" );
+end
+
