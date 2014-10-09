@@ -10,6 +10,7 @@ diagnosis: cdss.Diagnosis(value=="Diabetic ketoacidosis" )
 treatment: cdss.Treatment(this!=null )
 then
 treatment.setName("Insulinotherapy");
+System.out.println("Insulinotherapy");
 end
 
 rule"Transfer to the surgical service"
