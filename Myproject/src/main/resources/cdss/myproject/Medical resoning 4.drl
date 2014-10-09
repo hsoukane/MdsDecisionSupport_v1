@@ -32,3 +32,12 @@ then
 treatment.setName("Intravenous glucagon infusion");
 end
 
+rule"patient discharge"
+ruleflow-group"Diagnosis"
+when
+diagnosis:cdss.Diagnosis(value=="Good diagnosis" )
+treatment: cdss.Treatment(this!=null )
+then
+treatment.setName("All is right-Patient discharge");
+end
+
