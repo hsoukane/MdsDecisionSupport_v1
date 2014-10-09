@@ -1,2 +1,34 @@
 package cdss.myproject;
+import cdss.Treatment;
+import cdss.Diagnosis;
+
+rule"Insulinotherapy"
+ruleflow-group"Diagnosis"
+no-loop true
+when
+diagnosis: cdss.Diagnosis(value=="Diabetic ketoacidosis" )
+treatment: cdss.Treatment(this!=null )
+then
+treatment.setName("Insulinotherapy");
+end
+
+rule"Transfer to the surgical service"
+ruleflow-group"Diagnosis"
+no-loop true
+when
+diagnosis: cdss.Diagnosis(value=="Diabetic coma" )
+treatment: cdss.Treatment(this!=null )
+then
+treatment.setName("Diabetic coma");
+end
+
+rule"Hypoglycemia"
+ruleflow-group"Diagnosis"
+no-loop true
+when
+diagnosis: cdss.Diagnosis(value=="Hypoglycemia" )
+treatment: cdss.Treatment(this!=null )
+then
+treatment.setName("Intravenous glucagon infusion");
+end
 
