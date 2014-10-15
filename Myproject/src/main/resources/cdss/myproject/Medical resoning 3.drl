@@ -36,7 +36,7 @@ when
  (vs1 : VitalSign( name == "Blood ketone" , value >= 6.0 , unit == "mmol/l" ) or vs2 : VitalSign( name == "Bicarbonate level" , value < 5.0 , unit == "mmol/l" ) or vs3 : VitalSign( name == "Blood venous PH" , value < 7.1 ) or vs4 : VitalSign( name == "Blood oxygen saturation" , value < 92.0 ) or vs5 : VitalSign( name == "Glasgow score" , value < 12.0 ) )
 suggestedDiagnosis : Diagnosis( this != null )
 then
-  suggestedDiagnosis.setValue("Diabetic coma");
+suggestedDiagnosis.setValue("Diabetic coma");
 System.out.println("coma diabetique");
  end
 
