@@ -43,7 +43,7 @@ System.out.println("coma diabetique");
 rule "Diabetic ketoacidosis"
  dialect "mvel"
 ruleflow-group "Diagnosis"
-salience 3
+salience 2
 when
 vs1: VitalSign( name == "Blood glucose" , value >= 11.0 , unit == "mmol/l" )
 vs2: VitalSign( name == "Blood ketone" , value >= 3.0 , unit == "mmol/l" )
