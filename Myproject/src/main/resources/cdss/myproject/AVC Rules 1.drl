@@ -1,2 +1,17 @@
 package cdss.myproject;
+import cdss.Symptom;
+import cdss.PatientRecord;
+
+
+rule"inserting patient symptoms into the wm"
+ruleflow-group"Avc ruleGroup1"
+salience 4
+no-loop true
+when
+patient: cdss.PatientRecord( syl:symptoms)
+sy:cdss.Symptom( )from syl
+then
+insertLogical(sy);
+System.out.println("insert fact:"+ sy.getDescription());
+end
 
