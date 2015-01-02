@@ -2,9 +2,8 @@ package cdss.myproject;
 import cdss.Symptom;
 import cdss.PatientRecord;
 
-
 rule"inserting symptoms into the wm"
-ruleflow-group"Avc ruleGroup1"
+ruleflow-group"AVC ruleGroup1"
 salience 4
 no-loop true
 when
@@ -15,3 +14,23 @@ insertLogical(sy);
 System.out.println("insert fact:"+ sy.getDescription());
 end
 
+
+rule"cdss suggested nurse examinations"
+ruleflow-group"AVC ruleGroup1"
+salience 4
+no-loop true
+when
+symp1:cdss.Symptom(description=="Aphasia" )
+symp2:cdss.Symptom(description=="Ataxia" )
+symp3:cdss.Symptom(description=="Hemiparesis" )
+symp4:cdss.Symptom(description=="Homonymous hemianopia" )
+symp5:cdss.Symptom(description=="Sensory loss" )
+symp6:cdss.Symptom(description=="Headache" )
+symp7:cdss.Symptom(description=="Loss of consciousness" )
+suggestedExam1:cdss.VitalParameterMeasurement( this!=null)
+suggestedExam2:cdss.VitalParameterMeasurement( this!=null)
+then
+suggestedExam1.setName("NIHSS scrore measurement");
+suggestedExam2.setName("Glasgow score measurement");
+
+end
