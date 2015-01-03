@@ -2,6 +2,7 @@ package cdss.myproject;
 import cdss.Symptom;
 import cdss.PatientRecord;
 import cdss.VitalParameterMeasurement;
+import cdss.Assignement;
 
 rule"inserting symptoms into the wm"
 ruleflow-group"AVC ruleGroup1"
@@ -29,9 +30,11 @@ symp6:cdss.Symptom(description=="Headache" )
 symp7:cdss.Symptom(description=="Loss of consciousness" )
 suggestedExam1:cdss.VitalParameterMeasurement( )
 suggestedExam2:cdss.VitalParameterMeasurement( )
+triage:cdss.Assignement( )
 then
 suggestedExam1.setName("NIHSS scrore measurement");
 suggestedExam2.setName("Glasgow score measurement");
+triage.setService("stroke unit");
 System.out.println("reasoning 1!!!!");
 System.out.println(suggestedExam1.getName());
 
