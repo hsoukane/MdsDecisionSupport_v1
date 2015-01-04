@@ -24,10 +24,10 @@ when
 symp1:cdss.Symptom(description=="Aphasia" )
 symp2:cdss.Symptom(description=="Ataxia" )
 symp3:cdss.Symptom(description=="Hemiparesis" )
-symp4:cdss.Symptom(description=="Homonymous hemianopia" )
-symp5:cdss.Symptom(description=="Sensory loss" )
-symp6:cdss.Symptom(description=="Headache" )
-symp7:cdss.Symptom(description=="Loss of consciousness" )
+symp4:cdss.Symptom(description=="Sensory loss" )
+(symp5:cdss.Symptom(description=="Headache" ) or
+symp6:cdss.Symptom(description=="Homonymous hemianopia" )or
+symp7:cdss.Symptom(description=="Loss of consciousness" ))
 suggestedExam1:cdss.VitalParameterMeasurement( )
 suggestedExam2:cdss.VitalParameterMeasurement( )
 triage:cdss.Assignement( )
@@ -38,5 +38,4 @@ triage.setService("Suspicion of stroke -> immediate transfer to the stroke unit"
 triage.setUrgency(1);
 System.out.println("reasoning 1!!!!");
 System.out.println(suggestedExam1.getName());
-
 end
